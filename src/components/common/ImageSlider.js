@@ -12,7 +12,7 @@ const ImageSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
       };
 
       const images = [
@@ -36,13 +36,15 @@ const ImageSlider = () => {
     
   return (
     <div className='pt-24'>
+         
     <Slider {...settings}>
     {images.map((image) => (
       <div key={image.id} className="w-full h-364">
-        <img className="mx-auto" src={image.src} alt={image.alt} />
+        <img className="mx-auto object-cover" src={image.src} alt={image.alt} />
       </div>
     ))}
   </Slider>
+  <h1 className="absolute top-0 left-0 w-full text-center text-3xl font-bold mb-4">My Image Slider</h1>
   </div>
   )
 }

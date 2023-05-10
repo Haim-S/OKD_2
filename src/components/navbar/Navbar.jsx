@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 import { PAGES_PATH } from '@/constant/PATH';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => {
 
@@ -15,13 +16,27 @@ const Navbar = () => {
       <div>
             <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
               {PAGES_PATH.map((p, i)=>{
+                if(i === PAGES_PATH.length -1){
+                  return(
+                    <>
+                    <Link key={i} href={p.path}>
+                    <li className='flex items-center justify-between ml-10 text-sm uppercase hover:text-stone-950'>
+                    {p.linkLabel} 
+                    <span className='text-gray-400 pr-1'>|</span>
+                    </li>
+                 </Link>
+                    <AiOutlineSearch style={{ fontSize: "20px"}} />
+                 </>
+                  )
+                }
                 return(
                   <Link key={i} href={p.path}>
-                   <li className='ml-10 text-sm uppercase hover:text-stone-950'>{p.linkLabel}</li>
+                   <li className='ml-10 text-sm uppercase hover:text-stone-950'>{p.linkLabel} <span className='text-gray-400'>|</span></li>
                 </Link>
                 )
               })}
             </ul>
+            
       </div>
            
     </div>

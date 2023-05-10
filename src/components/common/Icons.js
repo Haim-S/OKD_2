@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import {FaLinkedinIn, FaGithub} from "react-icons/fa";
+import {FaLinkedinIn, FaFacebookF} from "react-icons/fa";
 import {BsFillPersonLinesFill} from "react-icons/bs";
 import { AiOutlineMail} from "react-icons/ai"
 
@@ -33,7 +33,7 @@ const Icons = ({nav}) => {
   : 'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300'
   }
   >
-    <FaGithub />
+    <FaFacebookF />
   </div>
   </a>
 
