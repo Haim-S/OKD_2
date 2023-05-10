@@ -18,8 +18,8 @@ const Navbar = () => {
 
 
   return (
-  <nav className={ shadow ?'fixed w-full h-20 z-[100] ease-in-out duration-300': 'fixed w-full h-20 z-[100]'}>
-    <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+  <nav className={ shadow ?'fixed w-full h-20 z-[100] ease-in-out duration-300': 'fixed w-full h-20 z-[100] px-3'}>
+    <div className='flex justify-between items-center w-full h-full px-4 2xl:px-16'>
       <Link href={"/"}>
           <h1  className='cursor-pointer' style={{width: "70", height: "50"}}>OKD</h1>
       </Link>
