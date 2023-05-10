@@ -5,6 +5,12 @@ import {BsFillPersonLinesFill} from "react-icons/bs";
 import { AiOutlineMail} from "react-icons/ai"
 
 const Icons = ({nav}) => {
+
+const styleSidebar = 'bg-slate-50 rounded-full border-solid border-[1px] border-[#4A4A4A]  p-3 m-1 cursor-pointer hover:scale-105 ease-in duration-300';
+
+const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300';
+
+
   return (
    
 <div className='flex items-end my-4 w-full sm:w-[80]'>
@@ -15,8 +21,8 @@ const Icons = ({nav}) => {
 >
   <div 
   className={
-    nav?'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-105 ease-in duration-300'
-  : 'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300'
+    nav? styleSidebar
+  : styleGlobal
   }
   >
     <FaLinkedinIn />
@@ -28,20 +34,20 @@ const Icons = ({nav}) => {
  rel='noreferrer'
 >
   <div 
-  className={
-    nav?'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-105 ease-in duration-300'
-  : 'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300'
+   className={
+    nav? styleSidebar
+  : styleGlobal
   }
   >
     <FaFacebookF />
   </div>
   </a>
 
-  <Link href='/#contact'>
+  <Link href='/Contact'>
   <div 
   className={
-    nav?'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-105 ease-in duration-300'
-  : 'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300'
+    nav? styleSidebar
+  : styleGlobal
   }
   >
     <AiOutlineMail />
@@ -49,9 +55,9 @@ const Icons = ({nav}) => {
   </Link>
   <Link href='/resume'>
   <div 
-  className={
-    nav?'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-105 ease-in duration-300'
-  : 'bg-slate-50 rounded-full p-3 m-1 cursor-pointer hover:scale-110 ease-in duration-300'
+   className={
+    nav? styleSidebar
+  : styleGlobal
   }
   >
     <BsFillPersonLinesFill />
