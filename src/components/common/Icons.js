@@ -15,29 +15,23 @@ const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scal
    
 <div className='flex items-end my-4 w-full sm:w-[80]'>
 
-<a href="https://www.linkedin.com/in/aviv-haim-s-874bb0265/"
+<a href="https://www.linkedin.com/"
  target='_blank'
  rel='noreferrer'
 >
   <div 
-  className={
-    nav? styleSidebar
-  : styleGlobal
-  }
+  className={nav? styleSidebar: styleGlobal}
   >
     <FaLinkedinIn />
   </div>
 </a>
 
-<a href="https://github.com/Haim-S"
+<a href="https://facebook.com"
  target='_blank'
  rel='noreferrer'
 >
   <div 
-   className={
-    nav? styleSidebar
-  : styleGlobal
-  }
+   className={nav? styleSidebar: styleGlobal}
   >
     <FaFacebookF />
   </div>
@@ -45,20 +39,14 @@ const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scal
 
   <Link href='/Contact'>
   <div 
-  className={
-    nav? styleSidebar
-  : styleGlobal
-  }
+  className={nav? styleSidebar: styleGlobal}
   >
     <AiOutlineMail />
   </div>
   </Link>
   <Link href='/resume'>
   <div 
-   className={
-    nav? styleSidebar
-  : styleGlobal
-  }
+   className={nav? styleSidebar: styleGlobal}
   >
     <BsFillPersonLinesFill />
   </div>
