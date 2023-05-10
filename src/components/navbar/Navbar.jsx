@@ -1,14 +1,24 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 import { PAGES_PATH } from '@/constant/PATH';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
+import SideBar from './SideBar';
 
 const Navbar = () => {
-
+  
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
   const [linkColor, setLinkColor] = useState('#4A4A4A');
 
+  
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+
   return (
-  <nav className={'fixed w-full h-20 z-[100] ease-in-out duration-300'}>
+  <nav className={ shadow ?'fixed w-full h-20 z-[100] ease-in-out duration-300': 'fixed w-full h-20 z-[100]'}>
     <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
       <Link href={"/"}>
           <h1  className='cursor-pointer' style={{width: "70", height: "50"}}>OKD</h1>
@@ -38,8 +48,9 @@ const Navbar = () => {
             </ul>
             
       </div>
-           
+           <div onClick={handleNav} className='md:hidden'><AiOutlineMenu size={25}/></div>     
     </div>
+    <SideBar nav={nav} handleNav={handleNav}/>
   </nav>
   )
 }
