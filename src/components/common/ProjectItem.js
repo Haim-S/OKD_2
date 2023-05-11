@@ -32,7 +32,7 @@ const ProjectItem = ({mainImg, projectName, projectAbout, Architects, Locations,
         <Image width={"100%"} height={"50%"} src={mainImg} alt="/"/>
         <div class="grid grid-cols-3 gap-4">
             <div class="col-span-2">
-                <h1 className='font-bold'>{projectName}</h1>
+                <h3>{projectName}</h3>
                 <p>{projectAbout}</p>
             </div>
             <div>

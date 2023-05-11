@@ -1,16 +1,16 @@
 import React from 'react'
 import CategoriesItem from '@/components/common/CategoriesItem';
-import { CATEGORIES_PATH } from '@/constant/PATH';
+import { useSelector } from 'react-redux';
 
 const Categories = () => {
 
-
+  const {LINKS_CATEGORIES} = useSelector((store) => store.translations)
 
   return (
     <div id='Categories' className='w-full pt-24'>
        <div className='max-w-[1240px] mx-auto px-2'>
        <div className='grid md:grid-cols-3 gap-5'>
-        {CATEGORIES_PATH.map((p, i)=>{
+        {LINKS_CATEGORIES.map((p, i)=>{
           return(
             <CategoriesItem
             projectID={i}

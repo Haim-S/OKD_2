@@ -1,10 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import {AiOutlineClose} from "react-icons/ai"
-import { PAGES_PATH } from '@/constant/PATH'
+import { useDispatch, useSelector } from 'react-redux';
+
 import Icons from '../common/Icons'
 
 const SideBar = ({nav, handleNav}) => {
+
+  const {isHebrew, LINKS_PAGES} = useSelector((store) => store.translations)
+
   return (
 <div
   className={
@@ -22,12 +26,13 @@ const SideBar = ({nav, handleNav}) => {
       </div>
     </div>
     <div className='border-b border-gray-300 my-4'>
-        <p className='w-[85%] md:w-[90%] py-4'>Come build something legendary together</p>
+
+        <p className='w-[85%] md:w-[90%] py-4'>{isHebrew? "" : "Come build something legendary together"}</p>
     </div>
 
     <div className='py-4 flex flex-col'>
         <ul className='uppercase'>
-        {PAGES_PATH.map((p, i)=>{
+        {LINKS_PAGES.map((p, i)=>{
                 return(
                   <Link key={i} href={p.path}>
                    <li onClick={handleNav} className='py-4 text-sm'>{p.linkLabel}</li>
@@ -36,7 +41,7 @@ const SideBar = ({nav, handleNav}) => {
               })}
         </ul>
         <div className='pt-28'>
-              <p className='uppercase tracking-widest text-[#4A4A4A]'>Let's Connect</p>
+              <p className='uppercase tracking-widest text-[#4A4A4A]'>{isHebrew? <hr/> : "Let's Connect"}</p>
               <Icons nav={nav}/>  
         </div>
     </div>

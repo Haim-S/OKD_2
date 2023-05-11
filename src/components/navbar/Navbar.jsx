@@ -1,14 +1,20 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
-import { PAGES_PATH } from '@/constant/PATH';
+import {changeLanguage} from "../../store/Slices/translationsSlice"
+import { useDispatch, useSelector } from 'react-redux';
+// import { PAGES_PATH_HE } from '../../constant/hebrew/PATH_HE';
 import { AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import SideBar from './SideBar';
+import Accessibility from '@/components/accessibility/Accessibility';
 
 const Navbar = () => {
   
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [linkColor, setLinkColor] = useState('#4A4A4A');
+
+  const dispatch = useDispatch();
+  const {LINKS_PAGES,  isHebrew} = useSelector((store) => store.translations)
 
   
 
@@ -21,12 +27,13 @@ const Navbar = () => {
   <nav className={ shadow ?'fixed w-full h-20 z-[100] ease-in-out duration-300': 'fixed w-full h-20 z-[100] px-3'}>
     <div className='flex justify-between items-center w-full h-full px-4 2xl:px-16'>
       <Link href={"/"}>
-          <h1  className='cursor-pointer' style={{width: "70", height: "50"}}>OKD</h1>
+          <h2  className='cursor-pointer' style={{width: "70", height: "50"}}>OKD</h2>
       </Link>
+      <button onClick={()=>dispatch(changeLanguage())}>lng</button>
       <div>
             <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-              {PAGES_PATH.map((p, i)=>{
-                if(i === PAGES_PATH.length -1){
+              {LINKS_PAGES.map((p, i)=>{
+                if(i === LINKS_PAGES.length -1){
                   return(
                     <>
                     <Link key={i} href={p.path}>
@@ -51,6 +58,7 @@ const Navbar = () => {
            <div onClick={handleNav} className='md:hidden'><AiOutlineMenu size={25}/></div>     
     </div>
     <SideBar nav={nav} handleNav={handleNav}/>
+    <Accessibility/>
   </nav>
   )
 }

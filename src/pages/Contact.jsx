@@ -1,28 +1,37 @@
 import React from 'react'
 import Form from '@/components/common/Form'
-import { CONTACT_TEXT } from '@/constant/TEXT'
+import { useSelector } from 'react-redux';
+// import { CONTACT_TEXT } from '@/constant/english/TEXT_EN'
 
 const Contact = () => {
+
+  const {PageCONTACT_TEXT, isHebrew} = useSelector((store) => store.translations)
+
+  const styleHE = 'flex items-end justify-end tracking-widest text-[#4A4A4A]';
+  const styleEN = 'py-2 tracking-widest text-[#4A4A4A]';
+  const hrStyleEN = 'w-[10%] border-[#4A4A4A] border-[1.4px] my-10';
+  const hrStyleHE = 'w-[15%] ml-[85%] border-[#4A4A4A] border-[1.4px] my-10';
+
   return (
-    <div className='w-full md:h-full pt-32'>
+    <div className={'w-full md:h-full pt-32'}>
      <div  className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-      {CONTACT_TEXT.map((p, i)=> {
+      {PageCONTACT_TEXT.map((p, i)=> {
         return(
 <>
-     <h1 key={i} className='text-5xl tracking-widest uppercase text-[#4A4A4A]'>
+     <h1 key={i} className={isHebrew ? styleHE : styleEN}>
         {p.titleOne}
       </h1>
-     <h1 className='text-5xl py-2 tracking-widest uppercase text-[#4A4A4A]'>
+     <h1 className={isHebrew ? styleHE : styleEN}>
         {p.titleTwo}
       </h1>
-      <hr className='w-[10%] border-[#4A4A4A] border-[1.4px] my-10'/>
-      <h1 className='text-4xl py-2 tracking-widest text-[#4A4A4A]'>
+      <hr className={isHebrew ? hrStyleHE : hrStyleEN}/>
+      <h2 className={isHebrew ? styleHE : styleEN}>
       {p.subtitleOne}
-      </h1>
-      <h1 className='text-4xl py-2 tracking-widest text-[#4A4A4A]'>
+      </h2>
+      <h2 className={isHebrew ? styleHE : styleEN}>
       {p.subtitleTwo}
-      </h1>
-      <p>
+      </h2>
+      <p className={isHebrew ? styleHE : styleEN}>
      {p.paragraphOne}
       <br/>
       {p.paragraphTwo}

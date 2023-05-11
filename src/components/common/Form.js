@@ -1,7 +1,9 @@
 import React, {useRef, useState} from 'react'
+import { useSelector } from 'react-redux';
 
 const Form = () => {
 
+  const { isHebrew, pageCONTACT_INPUT} = useSelector((store) => store.translations)
   const [status, setStatus] = useState(false);
 
     const Refname = useRef();
@@ -38,34 +40,37 @@ const Form = () => {
     
     }
 
-    const INPUT_CONTACT = [
-      {message: false, label: "Name", ref: Refname},
-      {message: false, label: "Email", ref: Refemail},
-      {message: false, label: "Phone", ref: Refphone},
-      {message: true, label: "Message", ref: Refmessage},
-      ];
+      const styleInputHE = "mt-1 block w-full pl-[80%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
+      const styleInputEN = "mt-1 block w-full px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
 
-
+      function removeDigits(str) {
+        
+          return str?.split(0,-1);
+       
+      }
 
   return (
 <form onSubmit={handelSubmit}>
 <div className='w-full my-3'>
   <div className=' grid grid-cols-3 gap-4 my-8'>
-    {INPUT_CONTACT.map((p, i)=> {
+    {pageCONTACT_INPUT.map((p, i)=> {
       if(!p.message){
         return(
-          <input type="text"  placeholder={p.label} ref={p.ref} className="mt-1 block w-full px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"/>
+          <input type="text"  placeholder={p.label} ref={removeDigits(p.ref)} className={isHebrew ? styleInputHE: styleInputEN}/>
           )
         }
         return(
-          <input type="text" placeholder="Type something here" className="mt-1 block w-full col-span-3 px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"/>
+          <input type="text" placeholder="Type something here" className={
+            isHebrew ? "mt-1 block w-full col-span-3 pl-[90%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400" 
+            : "mt-1 block w-full col-span-3 px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
+          }/>
           )
         })}
   </div>  
 </div>
 {status ? 
 <h3 className='w-full p-4 mt-4'>We will get back to you soon</h3> 
-: <button class="mt-3 p-3 px-10 text-white  bg-[#4A4A4A] hover:bg-[#4a4a4ac5] ">Send</button>
+: <button class="mt-3 p-3 px-10 text-white  bg-[#4A4A4A] hover:bg-[#4a4a4ac5] ">{isHebrew ? "שליחה" : "Send"}</button>
 }
 </form>
   )

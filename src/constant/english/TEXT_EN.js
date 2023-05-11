@@ -9,6 +9,13 @@ const CONTACT_TEXT = [
 ]
 
 
+const INPUT_CONTACT = [
+    {message: false, label: "Name", ref: "Refname"},
+    {message: false, label: "Email", ref: "Refemail"},
+    {message: false, label: "Phone", ref: "Refphone"},
+    {message: true, label: "Message", ref: "Refmessage"},
+    ];
+
 
 const FOOTER_TEXT = [
     {title: "", textONE: "+972 073-7826191", textTWO: "Yarok 85, the industrial zone", textTree: "office@okd.co.il" },
@@ -16,4 +23,4 @@ const FOOTER_TEXT = [
     {title: "PRODUCTS", textONE: "Anti-glare solutions", textTWO: "Window coating against the sun", textTree: "Coatings to prevent radiatio" }
 ]
 
-export {FOOTER_TEXT, CONTACT_TEXT}
+export {FOOTER_TEXT, CONTACT_TEXT, INPUT_CONTACT}
