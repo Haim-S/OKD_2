@@ -16,10 +16,12 @@ const Accessibility = () => {
 
   return (
     <div className={useAccessible ?
-        'fixed left-0 top-[400px] w-[20%] sm:w-[5%] md:w-[3%] h-[25%] bg-[#ffff] ease-in duration-500 p-3':
+        'fixed left-0 top-[400px] w-[10%] sm:w-[5%] md:w-[3%] h-[30%] bg-[#ffff] ease-in duration-500 p-3':
         'fixed left-0 top-[400px] w-[8%] sm:w-[5%] md:w-[3%] h-[5%] bg-[#ffff] ease-in duration-500 p-3' }>
         <div>
+           
         <FaAccessibleIcon onClick={()=>SETAccessible(PREV => !PREV)}/>
+            
         {useAccessible ? 
         <div className='w-full h-full flex flex-col items-center justify-evenly'>
             <div className='p-3'><CgEditHighlight/></div>
