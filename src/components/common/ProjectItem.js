@@ -28,7 +28,7 @@ const ProjectItem = ({mainImg, projectName, projectAbout, Architects, Locations,
 
     return (
 <div className='relative flex items-center justify-center h-auto w-full'>
-    <div className='flex flex-col'>
+    <div className='flex flex-col mt-[100px]'>
         <Image width={"100%"} height={"50%"} src={mainImg} alt="/"/>
         <div class="grid grid-cols-3 gap-4">
             <div class="col-span-2">
