@@ -13,6 +13,7 @@ const Categories = () => {
         {LINKS_CATEGORIES.map((p, i)=>{
           return(
             <CategoriesItem
+            key={i}
             projectID={i}
             categoriesName={p.name}
             backgroundImg={p.img}
