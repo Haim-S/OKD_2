@@ -40,8 +40,8 @@ const Form = () => {
     
     }
 
-      const styleInputHE = "mt-1 block w-full pl-[80%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
-      const styleInputEN = "mt-1 block w-full px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
+      const styleInputHE = "mt-1 block w-full pl-[80%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none"
+      const styleInputEN = "mt-1 block w-full px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none"
 
       function removeDigits(str) {
         
@@ -61,8 +61,8 @@ const Form = () => {
         }
         return(
           <input type="text" placeholder="Type something here" className={
-            isHebrew ? "mt-1 block w-full col-span-3 pl-[90%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400" 
-            : "mt-1 block w-full col-span-3 px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400"
+            isHebrew ? "mt-1 block w-full col-span-3 pl-[90%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none" 
+            : "mt-1 block w-full col-span-3 px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none"
           }/>
           )
         })}
