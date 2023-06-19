@@ -9,7 +9,7 @@ const Categories = () => {
   return (
     <div id='Categories' className='w-full pt-24'>
        <div className='max-w-[1240px] mx-auto px-2'>
-       <div className='grid md:grid-cols-3 gap-5'>
+       <div className='grid md:grid-cols-2 gap-5'>
         {LINKS_CATEGORIES.map((p, i)=>{
           return(
             <CategoriesItem
