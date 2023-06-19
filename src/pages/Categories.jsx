@@ -7,7 +7,7 @@ const Categories = () => {
   const {LINKS_CATEGORIES} = useSelector((store) => store.translations)
 
   return (
-    <div id='Categories' className='w-full pt-24'>
+    <div id='Categories' className='w-full pt-20'>
        <div className='max-w-[1240px] mx-auto px-2'>
        <div className='grid md:grid-cols-2 gap-5'>
         {LINKS_CATEGORIES.map((p, i)=>{

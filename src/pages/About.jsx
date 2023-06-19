@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <div className='w-full md:h-screen p-2 flex items-center py-16'>
-      <div className='max-w-[1240px] m-auto flex items-start flex-col w-full mt-7'>
+      <div className='max-w-[1240px] m-auto flex items-start justify-center flex-col w-full h-full mt-7'>
         <div className=''>
         <Image src={pix} width={200} height={200}/>
         </div>
