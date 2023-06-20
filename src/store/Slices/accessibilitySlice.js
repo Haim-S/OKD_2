@@ -28,4 +28,7 @@ const accessibilitySlice = createSlice({
             state.textColor= "black";
         }
     }
-})
+});
+
+export const {changeToHighContrast, changeToNegativeContrast, refresh} = accessibilitySlice.actions;
+export default accessibilitySlice.reducer;
