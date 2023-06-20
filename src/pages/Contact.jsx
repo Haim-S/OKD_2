@@ -19,11 +19,11 @@ const Contact = () => {
         return(
 <>
      <h2 key={i} style={{fontSize: "80px"}} className={isHebrew ? styleHE : styleEN}>
-        {p.titleOne} {p.titleTwo}
+        {p.titleOne}
       </h2>
-     {/* <h2 style={{fontSize: "80px", marginTop: "20px"}} className={isHebrew ? styleHE : styleEN}>
+     <h2 style={{fontSize: "80px", marginTop: "20px"}} className={isHebrew ? styleHE : styleEN}>
         {p.titleTwo}
-      </h2> */}
+      </h2>
       <hr className={isHebrew ? hrStyleHE : hrStyleEN}/>
       <h2 className={isHebrew ? styleHE : styleEN}>
       {p.subtitleOne}
