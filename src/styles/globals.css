@@ -14,7 +14,7 @@
   --background-end-rgb: 255, 255, 255;
   --background-nav: #D0ccc4;
   --border-buttom-nav: #a9a59e;
-  --background-main: white;
+  --background-body: white;
   --background-footer: #4A4A4A;
 }
 
@@ -34,7 +34,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    background-color: #fff;
+    background-color: var(--background-body);
     padding: 0;
     margin: 0;
     box-sizing: border-box;

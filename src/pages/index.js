@@ -10,15 +10,6 @@ import Categories from './Categories'
 
 export default function Home() {
 
-const [colorBody, setColorBody] = useState(false);
-
-// if (colorBody) {
-//   document.body.style.backgroundColor = 'black';
-//   // document.img.style.backgroundColor = 'black';
-// } else {
-//   document.body.style.backgroundColor = 'white';
-// }
-
   return (
    <>
    <Head>

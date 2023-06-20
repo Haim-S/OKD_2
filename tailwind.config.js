@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const istrue = false;
+const color = istrue ? "yellow" : "black";
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,6 +16,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        textmain: color,
+      }
     },
   },
   plugins: [],
