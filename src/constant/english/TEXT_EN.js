@@ -2,7 +2,7 @@
 
 const CONTACT_TEXT = [
 {
-    titleOne: "Contact", titleTwo: "US", subtitleOne: "Have a project?", subtitleTwo: "WE love to hear from you.",
+    titleOne: "Contact", titleTwo: "us", subtitleOne: "Have a project?", subtitleTwo: "We love to hear from you.",
     paragraphOne: "We’ve worked with clients of all sizes, from statups to enterprose brands.",
     paragraphTwo: "Let’s talk about your project and how we can help provide value."
 }
