@@ -1,11 +1,20 @@
+'use client'
 import React, {useState} from 'react'
 import { FaAccessibleIcon } from 'react-icons/fa';
 import {CgEditHighlight} from "react-icons/cg"
 import {FaEye, FaRegLightbulb} from "react-icons/fa"
 import {GrPowerReset} from "react-icons/gr"
 
+import {changeToHighContrast, changeToNegativeContrast} from "../../store/Slices/accessibilitySlice";
+import { useSelector, useDispatch } from 'react-redux';
+
 const Accessibility = () => {
     const [useAccessible, SETAccessible] = useState(false);
+
+  
+    
+
+    const dispatch = useDispatch();
 
   return (
     <div className={useAccessible ?
@@ -17,8 +26,8 @@ const Accessibility = () => {
             
         {useAccessible ? 
         <div className='w-full h-full flex flex-col items-center justify-evenly'>
-            <div className='p-3'><CgEditHighlight/></div>
-            <div className='p-3'><FaEye/></div>
+            <button onClick={()=>dispatch(changeToHighContrast())} className='p-3 cursor-pointer'><CgEditHighlight/></button>
+            <div onClick={()=>dispatch(changeToNegativeContrast())} className='p-3 cursor-pointer'><FaEye/></div>
             <div className='p-3'><FaRegLightbulb/></div>
             <div className='p-3'><GrPowerReset/></div>
             <div className='p-3'><GrPowerReset/></div>
@@ -31,3 +40,14 @@ const Accessibility = () => {
 }
 
 export default Accessibility
+
+// export const getMyColorBody = ()=>{
+
+// }
+
+// export const getMyTextColor = ()=>{
+
+//   const {bodyColor, textColor, isHighContrast, isNegativeContrast} = useSelector((state)=> state.accessibility.textColor);
+
+//   return textColor;
+// }

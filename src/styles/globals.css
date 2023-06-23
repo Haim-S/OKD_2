@@ -78,4 +78,30 @@ footer{
   li {
     @apply cursor-pointer
   }
+
+  
+.contactStyleHe{
+  @apply flex items-end justify-end tracking-widest text-[#4A4A4A];
+}
+
+.contactStyleEn{
+  @apply py-2 tracking-widest text-[#4A4A4A];
+}
+
+.hrStyleEN{
+  @apply w-[10%] border-[#4A4A4A] border-[1.4px] my-10;
+}
+
+.hrStyleHE{
+  @apply w-[15%] ml-[85%] border-[#4A4A4A] border-[1.4px] my-10;
+}
+
+.footerStyleEn {
+  @apply flex-col relative items-center justify-center h-auto w-full
+}
+
+
+.footerStyleHe {
+  @apply flex-col relative flex items-end justify-end h-auto w-full
+}
 }

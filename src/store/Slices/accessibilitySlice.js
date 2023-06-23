@@ -10,9 +10,6 @@ const accessibilitySlice = createSlice({
         textColor: "black",
     },
     reducers:{
-        changeToAccessibility: (state) => {
-
-        },
         changeToHighContrast: (state) => {
             state.isHighContrast = !state.isHighContrast;
             state.bodyColor = "black";

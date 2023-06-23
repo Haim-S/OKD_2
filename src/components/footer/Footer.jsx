@@ -6,9 +6,6 @@ const Footer = () => {
 
   const {FOOTER_TEXT, isHebrew} = useSelector((store) => store.translations)
 
-  const styleEN = ' flex-col relative items-center justify-center h-auto w-full';
-  const styleHE = ' flex-col relative flex items-end justify-end h-auto w-full';
-
   return (
     <footer className={'w-full h-auto mt-14 py-14'}>
        <div className='max-w-[1240px] mx-auto px-2'>
@@ -17,7 +14,7 @@ const Footer = () => {
       
         {FOOTER_TEXT.map((p, i)=>{
             return(
-              <div key={i} className={isHebrew ? styleHE : styleEN}>
+              <div key={i} className={isHebrew ? "footerStyleHe" : "footerStyleEn"}>
                 <h3 className='pb-2 text-white'>{p.title}</h3>
                 <p className='text-white'>{p.textONE}</p>
                 <p className='py-1 text-white'>{p.textTWO}</p>

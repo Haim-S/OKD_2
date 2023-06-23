@@ -7,10 +7,6 @@ const Contact = () => {
 
   const {PageCONTACT_TEXT, isHebrew} = useSelector((store) => store.translations)
 
-  const styleHE = 'flex items-end justify-end tracking-widest text-[#4A4A4A]';
-  const styleEN = 'py-2 tracking-widest text-[#4A4A4A]';
-  const hrStyleEN = 'w-[10%] border-[#4A4A4A] border-[1.4px] my-10';
-  const hrStyleHE = 'w-[15%] ml-[85%] border-[#4A4A4A] border-[1.4px] my-10';
 
   return (
     <div className={'w-full md:h-full pt-32'}>
@@ -18,20 +14,20 @@ const Contact = () => {
       {PageCONTACT_TEXT.map((p, i)=> {
         return(
 <>
-     <h2 key={i} style={{fontSize: "80px"}} className={isHebrew ? styleHE : styleEN}>
+     <h2 key={i} style={{fontSize: "80px"}} className={isHebrew ? "contactStyleHe" : "contactStyleEn"}>
         {p.titleOne}
       </h2>
-     <h2 style={{fontSize: "80px", marginTop: "20px"}} className={isHebrew ? styleHE : styleEN}>
+     <h2 style={{fontSize: "80px", marginTop: "20px"}} className={isHebrew ? "contactStyleHe" : "contactStyleEn"}>
         {p.titleTwo}
       </h2>
-      <hr className={isHebrew ? hrStyleHE : hrStyleEN}/>
-      <h2 className={isHebrew ? styleHE : styleEN}>
+      <hr className={isHebrew ? "hrStyleHE" : "hrStyleEN"}/>
+      <h2 className={isHebrew ? "contactStyleHe" : "contactStyleEn"}>
       {p.subtitleOne}
       </h2>
-      <h2 className={isHebrew ? styleHE : styleEN}>
+      <h2 className={isHebrew ? "contactStyleHe" : "contactStyleEn"}>
       {p.subtitleTwo}
       </h2>
-      <p className={isHebrew ? styleHE : styleEN}>
+      <p className={isHebrew ? "contactStyleHe" : "contactStyleEn"}>
      {p.paragraphOne}
       <br/>
       {p.paragraphTwo}
