@@ -56,11 +56,11 @@ const Form = () => {
     {pageCONTACT_INPUT.map((p, i)=> {
       if(!p.message){
         return(
-          <input type="text"  placeholder={p.label} ref={removeDigits(p.ref)} className={isHebrew ? styleInputHE: styleInputEN}/>
+          <input key={i} type="text"  placeholder={p.label} ref={removeDigits(p.ref)} className={isHebrew ? styleInputHE: styleInputEN}/>
           )
         }
         return(
-          <input type="text" placeholder="Type something here" className={
+          <input key={i} type="text" placeholder="Type something here" className={
             isHebrew ? "mt-1 block w-full col-span-3 pl-[90%] py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none" 
             : "mt-1 block w-full col-span-3 px-3 py-2 bg-white border-b border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none"
           }/>
@@ -70,7 +70,7 @@ const Form = () => {
 </div>
 {status ? 
 <h3 className='w-full p-4 mt-4'>We will get back to you soon</h3> 
-: <button class="mt-3 p-3 px-10 text-white  bg-[#4A4A4A] hover:bg-[#4a4a4ac5] ">{isHebrew ? "שליחה" : "Send"}</button>
+: <button className="mt-3 p-3 px-10 text-white  bg-[#4A4A4A] hover:bg-[#4a4a4ac5] ">{isHebrew ? "שליחה" : "Send"}</button>
 }
 </form>
   )

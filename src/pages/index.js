@@ -10,6 +10,7 @@ import Categories from './Categories'
 
 export default function Home() {
 
+
   return (
    <>
    <Head>

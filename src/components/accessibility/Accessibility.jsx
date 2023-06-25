@@ -5,7 +5,7 @@ import {CgEditHighlight} from "react-icons/cg"
 import {FaEye, FaRegLightbulb} from "react-icons/fa"
 import {GrPowerReset} from "react-icons/gr"
 
-import {changeToHighContrast, changeToNegativeContrast} from "../../store/Slices/accessibilitySlice";
+import {changeToHighContrast, changeToNegativeContrast, refresh} from "../../store/Slices/accessibilitySlice";
 import { useSelector, useDispatch } from 'react-redux';
 
 const Accessibility = () => {
@@ -29,7 +29,7 @@ const Accessibility = () => {
             <button onClick={()=>dispatch(changeToHighContrast())} className='p-3 cursor-pointer'><CgEditHighlight/></button>
             <div onClick={()=>dispatch(changeToNegativeContrast())} className='p-3 cursor-pointer'><FaEye/></div>
             <div className='p-3'><FaRegLightbulb/></div>
-            <div className='p-3'><GrPowerReset/></div>
+            <div onClick={()=> dispatch(refresh())} className='p-3'><GrPowerReset/></div>
             <div className='p-3'><GrPowerReset/></div>
             <div className='p-3'><GrPowerReset/></div>
         </div>

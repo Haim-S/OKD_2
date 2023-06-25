@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-// import { getMyTextColor } from './src/components/accessibility/Accessibility.jsx';
 
-// const myValue = getMyTextColor();
+
+
 
 const istrue = false;
 const color = istrue ? "yellow" : "black";
@@ -25,6 +25,7 @@ module.exports = {
       // class:{
       //   contactStyleHe: 'flex items-end justify-end tracking-widest text-[#4A4A4A]',
       //   contactStyleEn: 'py-2 tracking-widest text-[#4A4A4A]'
+        
       // }
     },
   },

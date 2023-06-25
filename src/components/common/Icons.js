@@ -22,7 +22,7 @@ const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scal
   <div 
   className={nav? styleSidebar: styleGlobal}
   >
-    <FaLinkedinIn />
+    <FaLinkedinIn style={{color: "#4A4A4A"}}/>
   </div>
 </a>
 
@@ -33,7 +33,7 @@ const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scal
   <div 
    className={nav? styleSidebar: styleGlobal}
   >
-    <FaFacebookF />
+    <FaFacebookF style={{color: "#4A4A4A"}}/>
   </div>
   </a>
 
@@ -41,14 +41,14 @@ const styleGlobal = 'bg-slate-50 rounded-full  p-3 m-1 cursor-pointer hover:scal
   <div 
   className={nav? styleSidebar: styleGlobal}
   >
-    <AiOutlineMail />
+    <AiOutlineMail style={{color: "#4A4A4A" }}/>
   </div>
   </Link>
   <Link href='/resume'>
   <div 
    className={nav? styleSidebar: styleGlobal}
   >
-    <BsFillPersonLinesFill />
+    <BsFillPersonLinesFill style={{color: "#4A4A4A"}}/>
   </div>
   </Link>
 </div>    

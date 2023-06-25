@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 
 const CategoriesProjectsItem = ({projectID, categoriesName, backgroundImg}) => {
+
+  const {textColor} = useSelector((state) => state.accessibility);
+
   return (
     <div>
     <div key={projectID} className='relative flex items-center justify-center h-auto w-full shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#f8f8fb9b] to-[#fdfdfd74]'>
@@ -19,7 +23,7 @@ const CategoriesProjectsItem = ({projectID, categoriesName, backgroundImg}) => {
         </Link>
     {/* </div> */}
     </div>
-        <p className='text-1xl text-black tracking-wider pl-2'>{categoriesName}</p>
+        <p className={`text-1xl ${textColor} tracking-wider pl-2`}>{categoriesName}</p>
     </div>
   )
 }
