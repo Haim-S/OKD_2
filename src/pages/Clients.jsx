@@ -6,7 +6,7 @@ const Clients = () => {
   const {bodyColor} = useSelector((state)=> state.accessibility)
 
   return (
-    <div className={`w-full md:h-screen p-2 flex items-center py-16 ${bodyColor}`}>
+    <div style={{background: bodyColor}} className={`w-full md:h-screen p-2 flex items-center py-16`}>
       Clients
     </div>
   )

@@ -9,7 +9,7 @@ const About = () => {
   const {bodyColor, textColor} = useSelector((state) => state.accessibility)
 
   return (
-    <div className={`w-full md:h-screen p-2 flex items-center py-16 ${bodyColor}`}>
+    <div style={{background: bodyColor}} className={`w-full md:h-screen p-2 flex items-center py-16`}>
       <div className='max-w-[1240px] m-auto flex items-start justify-center w-full h-full mt-7'>
         <div className='h-full w-[40%] sm:w-[500px] md:w-[240px] mt-5'>
         <Image src={pix} width={200} height={200}/>

@@ -10,7 +10,7 @@ const Contact = () => {
 
 
   return (
-    <div className={`w-full md:h-full pt-32 ${bodyColor}`}>
+    <div style={{background: bodyColor}} className={`w-full md:h-full pt-32`}>
      <div  className='max-w-[1240px] m-auto px-2 py-16 w-full'>
       {PageCONTACT_TEXT.map((p, i)=> {
         return(

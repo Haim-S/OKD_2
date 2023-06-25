@@ -6,7 +6,7 @@ const accessibilitySlice = createSlice({
     initialState:{
         isHighContrast: false,
         isNegativeContrast: false,
-        bodyColor: "bg-white",
+        bodyColor: "white",
         textColor: "text-black",
         bodyColorNavbar: "#D0ccc4",
         textColorNavbar: "#4A4A4A",
@@ -16,7 +16,7 @@ const accessibilitySlice = createSlice({
     reducers:{
         changeToHighContrast: (state) => {
             state.isHighContrast = !state.isHighContrast;
-            state.bodyColor = "bg-black";
+            state.bodyColor = "black";
             state.textColor = "text-blue-800";
             state.textColorFooter = "blue";
             state.bodyColorFooter = "black";
@@ -25,7 +25,7 @@ const accessibilitySlice = createSlice({
         },
         changeToNegativeContrast: (state) => {
             state.isNegativeContrast = !state.isNegativeContrast;
-            state.bodyColor = "bg-black";
+            state.bodyColor = "black";
             state.textColor = "text-yellow-300";
             state.textColorFooter = "yellow";
             state.bodyColorFooter = "black";

@@ -10,7 +10,7 @@ const Projects = () => {
   const {bodyColor} = useSelector((state) => state.accessibility)
 
   return (
-    <div id='projects' className={`w-full md:h-full flex items-center py-10 ${bodyColor}`}>
+    <div style={{background: bodyColor}} id='projects' className={`w-full md:h-full flex items-center py-10`}>
       {/* <div className='max-w-[1240px] mx-auto px-2 py-16'> */}
       <div className='max-w-[1240px] mx-auto px-2 p-16'>
        <div className='grid md:grid-cols-3 gap-5'>
