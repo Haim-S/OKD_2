@@ -18,8 +18,8 @@ const Accessibility = () => {
 
   return (
     <div className={useAccessible ?
-        'fixed left-0 top-[400px] w-[8%] sm:w-[5%] md:w-[3%] h-[30%] bg-[#eae7e7] ease-in duration-500 p-3':
-        'fixed left-0 top-[400px] w-[8%] sm:w-[3%] md:w-[50px] h-[4%] bg-[#eae7e7] ease-in duration-500 p-3' }>
+        'fixed left-0 top-[400px] w-[8%] sm:w-[5%] md:w-[3%]   h-[40%] lg:w-[3%]  bg-[#eae7e7] ease-in duration-500 p-3':
+        'fixed left-0 top-[400px] w-[8%] sm:w-[3%] md:w-[50px] h-[6%]   bg-[#eae7e7] ease-in duration-500 p-3' }>
         <div>
            
         <FaAccessibleIcon size={20} className='mt-1' onClick={()=>SETAccessible(PREV => !PREV)}/>
